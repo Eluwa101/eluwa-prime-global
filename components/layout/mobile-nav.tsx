@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { NavItem } from "@/types/site";
 
 type MobileNavProps = {
@@ -11,15 +12,14 @@ export function MobileNav({ items, open, onNavigate }: MobileNavProps) {
     <div className={`mobile-nav ${open ? "is-open" : ""}`}>
       <nav aria-label="Mobile navigation">
         {items.map((item) => (
-          <a key={item.href} href={item.href} onClick={onNavigate}>
+          <Link key={item.href} href={item.href} onClick={onNavigate}>
             {item.label}
-          </a>
+          </Link>
         ))}
-        <a className="button button-primary" href="#contact" onClick={onNavigate}>
+        <Link className="button button-primary" href="/#contact" onClick={onNavigate}>
           Get Started
-        </a>
+        </Link>
       </nav>
     </div>
   );
 }
-

@@ -1,5 +1,3 @@
-import { Footer } from "@/components/layout/footer";
-import { Header } from "@/components/layout/header";
 import { ContactSection } from "@/components/sections/contact-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { HeroSection } from "@/components/sections/hero-section";
@@ -11,20 +9,15 @@ import { ValuePropositionSection } from "@/components/sections/value-proposition
 
 export function HomePage() {
   return (
-    <>
-      <Header />
-      <main>
-        <HeroSection />
-        <TrustBar />
-        <ValuePropositionSection />
-        <ServicesSection />
-        <StatsSection />
-        <TestimonialsSection />
-        <FaqSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <HeroSection />
+      <TrustBar />
+      <ValuePropositionSection />
+      <ServicesSection />
+      <StatsSection />
+      <TestimonialsSection />
+      <FaqSection />
+      <ContactSection />
+    </main>
   );
 }
-

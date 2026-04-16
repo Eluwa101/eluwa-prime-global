@@ -51,3 +51,34 @@ export type CompanyProfile = {
   email: string;
 };
 
+export type TeamProfile = {
+  name: string;
+  title: string;
+  summary: string;
+  quote: string;
+  githubUrl: string;
+  photo: string;
+  focusAreas: string[];
+};
+
+export type PortfolioProject = {
+  name: string;
+  href: string;
+  description: string;
+  inspiration: string;
+  language: string;
+  updatedAt: string;
+  featured?: boolean;
+  source: "github" | "readme" | "inferred";
+};
+
+export type WorkPhase = {
+  title: string;
+  description: string;
+  outcome: string;
+};
+
+export type WorkHighlight = {
+  title: string;
+  description: string;
+};

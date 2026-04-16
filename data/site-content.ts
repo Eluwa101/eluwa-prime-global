@@ -4,9 +4,13 @@ import type {
   FaqItem,
   IndustryItem,
   NavItem,
+  PortfolioProject,
   ServiceItem,
   StatItem,
-  TestimonialItem
+  TeamProfile,
+  TestimonialItem,
+  WorkHighlight,
+  WorkPhase
 } from "@/types/site";
 
 export const companyProfile: CompanyProfile = {
@@ -20,12 +24,12 @@ export const companyProfile: CompanyProfile = {
 };
 
 export const navigationItems: NavItem[] = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Impact", href: "#impact" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" }
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/#services" },
+  { label: "Work", href: "/work" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Team", href: "/team" },
+  { label: "Contact", href: "/#contact" }
 ];
 
 export const industries: IndustryItem[] = [
@@ -150,10 +154,215 @@ export const serviceInterestOptions = [
 ] as const;
 
 export const imagery = {
+  logo:
+    "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg",
   hero:
     "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80&fm=webp",
   value:
-    "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80&fm=webp",
+    "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-building.jpeg",
   contact:
-    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80&fm=webp"
+    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80&fm=webp",
+  building:
+    "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-building.jpeg",
+  portrait:
+    "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/my_official_pics.jpg"
 };
+
+export const teamProfile: TeamProfile = {
+  name: "Eluwa Monday",
+  title: "Leadership Profile",
+  summary:
+    "Eluwa Monday is the public GitHub identity behind this growing portfolio of software, coursework, and consulting-focused builds. The official portrait on this page adds a more personal anchor to the Eluwa Prime Global story.",
+  quote:
+    "I'm Not Afraid of Failure or Challenges. It is part of the plan of Salvation, it makes me Stronger and Wiser!",
+  githubUrl: "https://github.com/Eluwa101",
+  photo: imagery.portrait,
+  focusAreas: [
+    "Software delivery and application development",
+    "IT consulting and solution planning",
+    "Digital presence and conversion-minded web experiences",
+    "Operational support and continuous improvement"
+  ]
+};
+
+export const portfolioProjects: PortfolioProject[] = [
+  {
+    name: "eluwa-prime-global",
+    href: "https://github.com/Eluwa101/eluwa-prime-global",
+    description:
+      "A Next.js landing experience for Eluwa Prime Global with modular sections, modern styling, and conversion-focused structure.",
+    inspiration:
+      "Inspired by the need to give Eluwa Prime Global a premium digital front door that presents the company with more credibility and clarity.",
+    language: "TypeScript",
+    updatedAt: "2026-04-16",
+    featured: true,
+    source: "readme"
+  },
+  {
+    name: "cse341-finalproject",
+    href: "https://github.com/Eluwa101/cse341-finalproject",
+    description:
+      "A backend API project built with Node.js, Express, MongoDB, Swagger, and OAuth authentication, including four collections and full CRUD flows.",
+    inspiration:
+      "Inspired by the challenge of building a more production-style team API where collaboration, authentication, and deployment all mattered at once.",
+    language: "JavaScript",
+    updatedAt: "2026-04-14",
+    featured: true,
+    source: "readme"
+  },
+  {
+    name: "wdd230",
+    href: "https://github.com/Eluwa101/wdd230",
+    description:
+      "A web development coursework repository centered on responsive layouts, content structure, and practical browser-based experiences.",
+    inspiration:
+      "This inspiration note is inferred from the course repository name and likely reflects a desire to strengthen front-end web fundamentals through repeated practice.",
+    language: "HTML",
+    updatedAt: "2026-04-12",
+    source: "inferred"
+  },
+  {
+    name: "cse341-api-project-personal",
+    href: "https://github.com/Eluwa101/cse341-api-project-personal",
+    description:
+      "A personal API project created during CSE 341 coursework to explore backend structure, endpoints, and data modeling more independently.",
+    inspiration:
+      "Likely inspired by the need to apply REST API concepts to an individual problem space and gain confidence building backend systems from scratch.",
+    language: "JavaScript",
+    updatedAt: "2026-04-05",
+    source: "inferred"
+  },
+  {
+    name: "cse341-api-project",
+    href: "https://github.com/Eluwa101/cse341-api-project",
+    description:
+      "A term-based CSE 341 JavaScript API project focused on backend patterns, structured endpoints, and course delivery requirements.",
+    inspiration:
+      "Inspired by mastering the core ideas of modern API development through a clearly scoped academic build.",
+    language: "JavaScript",
+    updatedAt: "2026-03-20",
+    source: "github"
+  },
+  {
+    name: "cse_340",
+    href: "https://github.com/Eluwa101/cse_340",
+    description:
+      "A backend-driven Node.js application with server-rendered pages and PostgreSQL-backed data management.",
+    inspiration:
+      "Inspired by the need to connect content, business logic, and structured data in a more complete full-stack workflow.",
+    language: "JavaScript",
+    updatedAt: "2026-02-17",
+    featured: true,
+    source: "readme"
+  },
+  {
+    name: "what-weather-app",
+    href: "https://github.com/Eluwa101/what-weather-app",
+    description:
+      "A weather web application built to provide real-time weather information and forecasts in a visually engaging interface.",
+    inspiration:
+      "Inspired by the everyday need for fast, reliable, and easy-to-read weather updates tailored to a user's location.",
+    language: "JavaScript",
+    updatedAt: "2024-10-30",
+    featured: true,
+    source: "github"
+  },
+  {
+    name: "team11",
+    href: "https://github.com/Eluwa101/team11",
+    description:
+      "A team school project based on the SleepOutside application starter, likely focused on collaborative front-end and shopping-flow patterns.",
+    inspiration:
+      "This entry is partly inferred and appears to be inspired by learning how to deliver a shared web experience in a team environment.",
+    language: "HTML",
+    updatedAt: "2024-10-06",
+    source: "readme"
+  },
+  {
+    name: "myProject",
+    href: "https://github.com/Eluwa101/myProject",
+    description:
+      "A project intended to help fellow BYU Pathway students outline a clearer career map and plan next steps with more confidence.",
+    inspiration:
+      "Inspired by a real community need: making career planning easier and more practical for students navigating growth and opportunity.",
+    language: "Project Notes",
+    updatedAt: "2024-06-20",
+    featured: true,
+    source: "github"
+  },
+  {
+    name: "cse121b",
+    href: "https://github.com/Eluwa101/cse121b",
+    description:
+      "A JavaScript coursework repository likely containing exercises, DOM work, and data-driven programming tasks.",
+    inspiration:
+      "This note is inferred from the repository name and points to a strong focus on building fluency with core JavaScript concepts.",
+    language: "JavaScript",
+    updatedAt: "2024-02-11",
+    source: "inferred"
+  },
+  {
+    name: "cse210-projects",
+    href: "https://github.com/Eluwa101/cse210-projects",
+    description:
+      "A C# project collection containing multiple starter and assignment paths for learning object-oriented development.",
+    inspiration:
+      "Inspired by the need to practice structured problem solving in C# across several small-to-medium programming exercises.",
+    language: "C#",
+    updatedAt: "2024-01-10",
+    source: "readme"
+  },
+  {
+    name: "wdd130",
+    href: "https://github.com/Eluwa101/wdd130",
+    description:
+      "An introductory web development repository centered on foundational HTML, layout, and website-building practice.",
+    inspiration:
+      "This entry is inferred from the course repository name and reflects an early-stage focus on building the basics of web creation well.",
+    language: "HTML",
+    updatedAt: "2023-09-20",
+    source: "inferred"
+  }
+];
+
+export const workPhases: WorkPhase[] = [
+  {
+    title: "Discover",
+    description:
+      "We begin with business goals, operational pain points, and the digital gaps standing between vision and execution.",
+    outcome:
+      "A clearer brief, tighter priorities, and technical direction grounded in real business needs."
+  },
+  {
+    title: "Design & Build",
+    description:
+      "From architecture and interfaces to backend logic and support systems, we shape solutions with usability and scale in mind.",
+    outcome:
+      "Purpose-built software, better workflows, and digital assets that feel intentional instead of improvised."
+  },
+  {
+    title: "Launch & Support",
+    description:
+      "After delivery, we stay close to performance, maintenance, refinement, and the support layers your team needs to keep moving.",
+    outcome:
+      "A more durable digital presence with guidance that continues beyond launch day."
+  }
+];
+
+export const workHighlights: WorkHighlight[] = [
+  {
+    title: "Consulting That Turns Into Action",
+    description:
+      "We translate business conversations into technical steps your team can actually execute."
+  },
+  {
+    title: "Delivery Across Software and Visibility",
+    description:
+      "Our work spans software builds, infrastructure support, web presence, and marketing alignment."
+  },
+  {
+    title: "Support Designed for Ongoing Growth",
+    description:
+      "We help organizations stabilize what exists now while making room for what comes next."
+  }
+];

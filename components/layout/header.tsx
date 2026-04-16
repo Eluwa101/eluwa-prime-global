@@ -1,11 +1,14 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { navigationItems } from "@/data/site-content";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { BrandMark } from "@/components/ui/brand-mark";
 
 export function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -26,26 +29,32 @@ export function Header() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  const solidHeader = pathname !== "/" || scrolled;
+
   return (
     <>
-      <header className={`site-header ${scrolled ? "is-solid" : ""}`}>
+      <header className={`site-header ${solidHeader ? "is-solid" : ""}`}>
         <div className="container site-header__inner">
-          <a className="site-header__brand" href="#home" aria-label="Eluwa Prime Global home">
+          <Link className="site-header__brand" href="/" aria-label="Eluwa Prime Global home">
             <BrandMark compact />
-          </a>
+          </Link>
 
           <nav className="site-header__nav" aria-label="Primary navigation">
             {navigationItems.map((item) => (
-              <a key={item.href} href={item.href}>
+              <Link key={item.href} href={item.href}>
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="site-header__actions">
-            <a className="button button-primary" href="#contact">
+            <Link className="button button-primary" href="/#contact">
               Get Started
-            </a>
+            </Link>
             <button
               type="button"
               className={`menu-toggle ${menuOpen ? "is-open" : ""}`}
@@ -69,4 +78,3 @@ export function Header() {
     </>
   );
 }
-

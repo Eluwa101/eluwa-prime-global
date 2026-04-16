@@ -646,7 +646,7 @@ main {
 .testimonials-section__header {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   gap: 1rem;
   margin-bottom: 2.25rem;
 }
@@ -853,6 +853,263 @@ main {
   transform: translateY(0);
 }
 
+.brand-mark__symbol--image {
+  overflow: hidden;
+  padding: 0.16rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: inset 0 0 0 1px rgba(19, 55, 72, 0.08);
+}
+
+.brand-mark__symbol--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.82rem;
+}
+
+.page-shell {
+  padding-top: 1rem;
+}
+
+.page-hero {
+  padding: 7.5rem 0 3rem;
+}
+
+.page-hero__grid,
+.team-page__grid,
+.team-details__grid,
+.team-building-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+
+.page-hero__content,
+.team-page__content {
+  display: grid;
+  gap: 1rem;
+}
+
+.page-hero__content h1,
+.team-page__content h1,
+.portfolio-section__intro h2 {
+  margin: 0;
+  font-family: var(--font-heading), sans-serif;
+  font-size: clamp(2.3rem, 5vw, 4.35rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.page-hero__content > p,
+.team-page__content > p {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: 1.8;
+}
+
+.page-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.page-hero__note {
+  margin-top: 0.8rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(19, 55, 72, 0.12);
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--color-text-soft);
+}
+
+.page-hero__image-shell,
+.team-page__portrait,
+.team-building-section__image {
+  position: relative;
+  overflow: hidden;
+  min-height: 32rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--color-shadow);
+}
+
+.page-hero__image-shell::after,
+.team-page__portrait::after,
+.team-building-section__image::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 34%;
+  background: linear-gradient(180deg, transparent, rgba(6, 24, 32, 0.22));
+}
+
+.page-hero--team {
+  padding-bottom: 2rem;
+}
+
+.team-page__portrait {
+  min-height: 40rem;
+}
+
+.team-page__title {
+  margin: -0.2rem 0 0;
+  color: var(--color-accent);
+  font-family: var(--font-heading), sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.team-quote-card,
+.focus-card,
+.project-card,
+.work-phase-card,
+.highlight-card {
+  border: 1px solid rgba(19, 55, 72, 0.12);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--color-shadow-soft);
+  backdrop-filter: blur(14px);
+}
+
+.team-quote-card {
+  padding: 1.4rem;
+  border-radius: 1.35rem;
+}
+
+.team-quote-card span {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--color-text-soft);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.team-quote-card strong {
+  font-family: var(--font-heading), sans-serif;
+  line-height: 1.55;
+}
+
+.team-focus-grid,
+.work-phases,
+.work-highlights,
+.portfolio-grid {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.team-focus-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.focus-card,
+.work-phase-card,
+.highlight-card {
+  padding: 1.45rem;
+  border-radius: 1.45rem;
+}
+
+.focus-card h3,
+.work-phase-card h3,
+.highlight-card h3,
+.project-card h3 {
+  margin: 0;
+  font-family: var(--font-heading), sans-serif;
+}
+
+.focus-card p,
+.work-phase-card p,
+.highlight-card p,
+.project-card p {
+  margin: 0.7rem 0 0;
+  color: var(--color-text-soft);
+  line-height: 1.75;
+}
+
+.team-building-section__image {
+  min-height: 27rem;
+}
+
+.portfolio-section {
+  padding-top: 2rem;
+}
+
+.portfolio-section__intro {
+  display: grid;
+  gap: 0.8rem;
+  max-width: 42rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-card {
+  display: grid;
+  gap: 1rem;
+  height: 100%;
+  padding: 1.55rem;
+  border-radius: 1.55rem;
+}
+
+.project-card.is-featured {
+  border-color: rgba(15, 158, 203, 0.28);
+}
+
+.project-card__meta,
+.project-card__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-card__meta span,
+.project-card__source {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-surface-muted);
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.project-card__inspiration strong {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 0.95rem;
+}
+
+.project-card__footer a {
+  color: var(--color-accent);
+  font-weight: 800;
+}
+
+.work-phases {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2.5rem;
+}
+
+.work-phase-card span {
+  display: inline-flex;
+  margin-bottom: 0.85rem;
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.work-highlights {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2.5rem;
+}
+
 @keyframes ticker-scroll {
   from {
     transform: translateX(0);
@@ -881,7 +1138,11 @@ main {
   .value-section__grid,
   .faq-section__grid,
   .contact-section__grid,
-  .site-footer__grid {
+  .site-footer__grid,
+  .page-hero__grid,
+  .team-page__grid,
+  .team-details__grid,
+  .team-building-section__grid {
     grid-template-columns: 1fr;
   }
 
@@ -910,6 +1171,13 @@ main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .team-focus-grid,
+  .portfolio-grid,
+  .work-phases,
+  .work-highlights {
+    grid-template-columns: 1fr;
+  }
+
   .testimonials-section__header {
     flex-direction: column;
     align-items: start;
@@ -931,6 +1199,14 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .page-hero__actions {
+    width: 100%;
+  }
+
+  .page-hero__actions .button {
+    width: 100%;
+  }
+
   .site-header__inner {
     grid-template-columns: auto auto;
     justify-content: space-between;
@@ -947,4 +1223,3 @@ main {
     width: 100%;
   }
 }
-

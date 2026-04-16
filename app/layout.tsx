@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { bodyFont, headingFont } from "@/app/fonts";
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
@@ -16,9 +18,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${headingFont.variable} ${bodyFont.variable}`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
 }
-

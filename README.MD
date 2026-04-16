@@ -13,6 +13,12 @@ Landing page scaffold for Eluwa Prime Global, built with Next.js App Router and 
 
 ```text
 app/
+  portfolio/
+    page.tsx
+  team/
+    page.tsx
+  work/
+    page.tsx
   fonts.ts
   globals.css
   layout.tsx
@@ -22,6 +28,12 @@ components/
     footer.tsx
     header.tsx
     mobile-nav.tsx
+  pages/
+    page-hero.tsx
+    portfolio-page.tsx
+    project-card.tsx
+    team-page.tsx
+    work-page.tsx
   sections/
     contact-section.tsx
     faq-section.tsx
@@ -49,6 +61,9 @@ types/
 
 - Sticky header with transparent-to-solid scroll behavior
 - Mobile navigation with hamburger menu
+- Dedicated `Work`, `Portfolio`, and `Team` pages
+- Real brand logo, building image, and official portrait integration
+- GitHub-informed portfolio entries with inspiration notes
 - Hero, trust ticker, value proposition, services, impact stats, testimonials, FAQ, contact, and footer sections
 - Scroll reveal animations for cards and content blocks
 - Parallax treatment for featured imagery

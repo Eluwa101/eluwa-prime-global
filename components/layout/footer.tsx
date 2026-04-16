@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { companyProfile, navigationItems, services } from "@/data/site-content";
 import { BrandMark } from "@/components/ui/brand-mark";
 
@@ -14,9 +15,9 @@ export function Footer() {
           <h3>Quick Links</h3>
           <div className="site-footer__links">
             {navigationItems.map((item) => (
-              <a key={item.href} href={item.href}>
+              <Link key={item.href} href={item.href}>
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -40,4 +41,3 @@ export function Footer() {
     </footer>
   );
 }
-
