@@ -133,7 +133,7 @@ export const metadata: Metadata = {
       "AI-powered software development, IT consulting, customer support automation, and digital strategy by Eluwa Monday and team. Serving clients globally from Nigeria.",
     images: [
       {
-        url: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg",
+        url: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-logo-new.png",
         width: 1200,
         height: 630,
         alt: "Eluwa Prime Global — AI, Software & IT Consulting"
@@ -148,7 +148,7 @@ export const metadata: Metadata = {
     description:
       "AI-powered software, IT consulting, and customer support automation. Founded by Eluwa Monday.",
     images: [
-      "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg"
+      "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-logo-new.png"
     ]
   },
   robots: {
@@ -165,9 +165,9 @@ export const metadata: Metadata = {
     canonical: "https://eluwaprimeglobal.com"
   },
   icons: {
-    icon: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg",
-    shortcut: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg",
-    apple: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg"
+    icon: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-logo-new.png",
+    shortcut: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-logo-new.png",
+    apple: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-logo-new.png"
   },
   other: {
     "linkedin:profile": "https://www.linkedin.com/in/monday-eluwa-ab2831256/"
@@ -183,7 +183,7 @@ const jsonLd = {
       name: "Eluwa Prime Global",
       alternateName: ["Prime Global Consulting", "Eluwa Prime Global Ltd"],
       url: "https://eluwaprimeglobal.com",
-      logo: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg",
+      logo: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-logo-new.png",
       foundingDate: "2019",
       description:
         "Eluwa Prime Global is an AI-powered software development and IT consulting company founded by Eluwa Monday in 2019. We specialise in artificial intelligence integration, custom software development, customer support automation, digital strategy, and business process outsourcing.",

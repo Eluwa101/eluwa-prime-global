@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import {
   companyProfile,
   imagery,
@@ -7,6 +10,9 @@ import {
 } from "@/data/site-content";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
+
+const OTHER_OPTION = "Other (please specify)";
+const allOptions = [...serviceInterestOptions, OTHER_OPTION];
 
 function WhatsAppIcon() {
   return (
@@ -17,6 +23,8 @@ function WhatsAppIcon() {
 }
 
 export function ContactSection() {
+  const [selected, setSelected] = useState(allOptions[0]);
+
   return (
     <section className="section contact-section" id="contact">
       <div className="container contact-section__grid">
@@ -46,14 +54,31 @@ export function ContactSection() {
 
             <label>
               <span>Service Interest</span>
-              <select name="serviceInterest" defaultValue={serviceInterestOptions[0]}>
-                {serviceInterestOptions.map((option) => (
+              <select
+                name={selected === OTHER_OPTION ? "_serviceCategory" : "serviceInterest"}
+                value={selected}
+                onChange={(e) => setSelected(e.target.value)}
+              >
+                {allOptions.map((option) => (
                   <option key={option} value={option}>
                     {option}
                   </option>
                 ))}
               </select>
             </label>
+
+            {selected === OTHER_OPTION && (
+              <label>
+                <span>Please describe your need</span>
+                <input
+                  type="text"
+                  name="serviceInterest"
+                  placeholder="e.g. Mobile app for food delivery"
+                  required
+                  autoFocus
+                />
+              </label>
+            )}
 
             <button type="submit" className="button button-primary">
               Send Inquiry

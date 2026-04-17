@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://eluwaprimeglobal.com";
+  const base = "https://eluwa101.github.io/eluwa-prime-global";
   const now = new Date();
 
   return [

@@ -12,9 +12,9 @@ export function BrandMark({ compact = false }: BrandMarkProps) {
         <Image
           src={imagery.logo}
           alt="Eluwa Prime Global logo"
-          width={64}
-          height={64}
-          sizes={compact ? "42px" : "52px"}
+          width={96}
+          height={96}
+          sizes={compact ? "52px" : "72px"}
         />
       </span>
       <div className="brand-mark__text">

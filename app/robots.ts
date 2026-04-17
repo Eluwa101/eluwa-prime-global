@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/"
       }
     ],
-    sitemap: "https://eluwaprimeglobal.com/sitemap.xml"
+    sitemap: "https://eluwa101.github.io/eluwa-prime-global/sitemap.xml"
   };
 }
