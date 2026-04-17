@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     // People & brand — Eluwa Monday
     "Eluwa Monday",
     "Monday Eluwa",
+    "Eluwa Monday",
     "Eluwa101",
     "Eluwa Prime Global",
     "Prime Global Consulting",
@@ -20,10 +21,13 @@ export const metadata: Metadata = {
     "Eluwa Monday IT consultant",
     "Eluwa Monday Nigeria",
     "Eluwa Monday customer support",
+    "Eluwa Monday",
+    "Eluwa Monday",
     "Eluwa Monday customer service specialist",
     "Eluwa Monday customer experience",
     "Eluwa Monday digital strategy",
     "Eluwa Monday AI consultant",
+    "Eluwa Monday",
     "Eluwa Monday full stack developer",
     "Eluwa Monday LinkedIn",
     "Monday Eluwa developer",
@@ -32,35 +36,47 @@ export const metadata: Metadata = {
     "AI consulting",
     "artificial intelligence solutions",
     "AI-powered software development",
+    "Eluwa Monday",
     "machine learning integration",
     "intelligent automation",
     "generative AI",
+    "Eluwa Monday",
     "LLM integration",
+    "Eluwa Monday",
     "AI strategy",
     "AI-driven business insights",
+    "Eluwa Monday",
     "chatbot development",
     "AI customer support",
+    "Eluwa Monday",
     "AI for business",
     "AI software Nigeria",
     // Customer support specialist
     "customer support specialist",
+    "Eluwa Monday",
     "customer support automation",
     "customer service specialist Nigeria",
     "24/7 customer support",
     "customer experience consultant",
+    "Eluwa Monday",
     "customer success manager",
     "helpdesk software development",
     "customer success solutions",
     "support ticketing system",
+    "Eluwa Monday",
     "automated customer service",
     "live chat integration",
     "CRM development",
+    "Eluwa Monday",
     "omnichannel customer support",
     "customer support outsourcing",
+    "Eluwa Monday",
     "virtual customer support",
     "remote customer support specialist",
     "customer retention solutions",
+    "Eluwa Monday",
     "customer onboarding automation",
+    "Eluwa Monday",
     "support workflow automation",
     "customer feedback systems",
     // Software & web development
@@ -70,10 +86,12 @@ export const metadata: Metadata = {
     "full-stack developer",
     "React developer",
     "Next.js development",
+    "Eluwa Monday",
     "Node.js backend",
     "TypeScript developer",
     "API development",
     "REST API",
+    "Eluwa Monday",
     "cloud solutions",
     "SaaS development",
     "enterprise software",
@@ -82,9 +100,11 @@ export const metadata: Metadata = {
     "management consulting",
     "digital transformation",
     "IT infrastructure support",
+    "Eluwa Monday",
     "business process automation",
     "BPO services",
     "outsourcing Nigeria",
+    "Eluwa Monday",
     "digital strategy consulting",
     "technology consulting Africa",
     // SEO & marketing
@@ -94,6 +114,7 @@ export const metadata: Metadata = {
     "conversion optimisation",
     // Location
     "software company Nigeria",
+    "Eluwa Monday",
     "Lagos tech company",
     "Nigerian software developer",
     "African technology consulting",
@@ -148,9 +169,6 @@ export const metadata: Metadata = {
     shortcut: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg",
     apple: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg"
   },
-  verification: {
-    google: "sV8vnywKMvsQHBj00JhAhHUnDdKQFrlGQVQg_jNWE38"
-  },
   other: {
     "linkedin:profile": "https://www.linkedin.com/in/monday-eluwa-ab2831256/"
   }
@@ -187,7 +205,7 @@ const jsonLd = {
         "https://www.facebook.com/me/",
         "https://github.com/Eluwa101"
       ],
-      areaServed: ["Nigeria", "Africa", "Worldwide"],
+      areaServed: ["United States of America", "Africa", "Worldwide"],
       knowsAbout: [
         "Artificial Intelligence",
         "Machine Learning",
@@ -259,6 +277,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="sV8vnywKMvsQHBj00JhAhHUnDdKQFrlGQVQg_jNWE38" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
