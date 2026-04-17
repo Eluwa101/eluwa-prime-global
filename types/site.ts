@@ -82,3 +82,21 @@ export type WorkHighlight = {
   title: string;
   description: string;
 };
+
+export type TeamMember = {
+  name: string;
+  title: string;
+  role: string;
+  summary: string;
+  photo: string;
+  linkedinUrl?: string;
+  githubUrl?: string;
+  skills: string[];
+};
+
+export type SocialLinks = {
+  facebook: string;
+  linkedin: string;
+  twitter: string;
+  whatsapp: string;
+};

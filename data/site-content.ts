@@ -6,7 +6,9 @@ import type {
   NavItem,
   PortfolioProject,
   ServiceItem,
+  SocialLinks,
   StatItem,
+  TeamMember,
   TeamProfile,
   TestimonialItem,
   WorkHighlight,
@@ -20,7 +22,14 @@ export const companyProfile: CompanyProfile = {
   about:
     "Founded in 2019, Eluwa Prime Global (Prime Global Consulting) is a pioneering private company providing quality solutions to private and public establishments. We translate client needs into technical specifications and engineering excellence.",
   hours: "Monday - Friday, 8 AM - 4 PM",
-  email: "hello@eluwaprimeglobal.com"
+  email: "eluwamonday2017@gmail.com"
+};
+
+export const socialLinks: SocialLinks = {
+  facebook: "https://www.facebook.com/me/",
+  linkedin: "https://www.linkedin.com/in/monday-eluwa-ab2831256/",
+  twitter: "https://x.com/Eluwa101",
+  whatsapp: "https://wa.me/qr/HDO6IF35JHN7J1"
 };
 
 export const navigationItems: NavItem[] = [
@@ -364,5 +373,57 @@ export const workHighlights: WorkHighlight[] = [
     title: "Support Designed for Ongoing Growth",
     description:
       "We help organizations stabilize what exists now while making room for what comes next."
+  }
+];
+
+export const teamMembers: TeamMember[] = [
+  {
+    name: "Eluwa Monday",
+    title: "Founder & Lead Consultant",
+    role: "Software Development & IT Strategy",
+    summary:
+      "Eluwa Monday is a software developer, IT consultant, and the founding mind behind Eluwa Prime Global. With expertise spanning full-stack development, AI integration, digital strategy, and management consulting, he leads the team in turning client visions into scalable, production-ready technology.",
+    photo: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/my_official_pics.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/monday-eluwa-ab2831256/",
+    githubUrl: "https://github.com/Eluwa101",
+    skills: [
+      "AI & Machine Learning Integration",
+      "Full-Stack Software Development",
+      "IT Consulting & Digital Strategy",
+      "Business Process Automation",
+      "Customer Support Systems"
+    ]
+  },
+  {
+    name: "Ngozi Daryl",
+    title: "UI/UX Designer",
+    role: "User Experience & Interface Design",
+    summary:
+      "Ngozi Daryl is a creative UI/UX professional who transforms complex business requirements into elegant, user-centred digital experiences. Her expertise in design systems, wireframing, and prototyping ensures every product we ship is both beautiful and intuitive.",
+    photo:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80&fm=webp",
+    skills: [
+      "UI/UX Design & Prototyping",
+      "Design Systems & Brand Identity",
+      "User Research & Usability Testing",
+      "Figma, Adobe XD & Interactive Wireframing",
+      "Mobile-First & Responsive Design"
+    ]
+  },
+  {
+    name: "Ike Ezeruo",
+    title: "Senior Software Engineer",
+    role: "Full-Stack Development & Code Architecture",
+    summary:
+      "Known as Code Guru, Ike Ezeruo is the engineering backbone of Eluwa Prime Global. He architects robust, high-performance backend systems, leads API development, and ensures every line of code meets enterprise-grade standards. His deep command of modern frameworks keeps the team's delivery sharp.",
+    photo:
+      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80&fm=webp",
+    skills: [
+      "Backend Architecture & API Engineering",
+      "Node.js, TypeScript & Cloud Infrastructure",
+      "Database Design (PostgreSQL, MongoDB)",
+      "AI-Powered Application Development",
+      "DevOps, CI/CD & System Reliability"
+    ]
   }
 ];

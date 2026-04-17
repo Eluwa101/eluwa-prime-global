@@ -99,6 +99,19 @@ main {
   backdrop-filter: blur(14px);
 }
 
+.button-whatsapp {
+  color: #ffffff;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  box-shadow: 0 16px 30px rgba(37, 211, 102, 0.28);
+}
+
+.contact-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
 .brand-mark {
   display: inline-flex;
   align-items: center;
@@ -840,6 +853,32 @@ main {
   color: var(--color-text-soft);
 }
 
+.site-footer__social {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-soft);
+  background: rgba(255, 255, 255, 0.6);
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.social-icon-link:hover {
+  color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(26px);
@@ -1033,6 +1072,81 @@ main {
   min-height: 27rem;
 }
 
+/* Team members grid */
+.team-members-section {
+  background: var(--color-surface-muted);
+}
+
+.team-members-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.team-member-card {
+  display: grid;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--color-shadow-soft);
+  overflow: hidden;
+}
+
+.team-member-card__image {
+  position: relative;
+  min-height: 22rem;
+  overflow: hidden;
+}
+
+.team-member-card__image img {
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.team-member-card:hover .team-member-card__image img {
+  transform: scale(1.03);
+}
+
+.team-member-card__body {
+  padding: 1.8rem;
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+
+.team-member-card__title {
+  margin: -0.25rem 0 0;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.team-member-card__skills {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.team-member-card__skills li {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  font-size: 0.82rem;
+  color: var(--color-text-soft);
+  font-weight: 500;
+}
+
+.team-member-card__links {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
 .portfolio-section {
   padding-top: 2rem;
 }
@@ -1142,7 +1256,8 @@ main {
   .page-hero__grid,
   .team-page__grid,
   .team-details__grid,
-  .team-building-section__grid {
+  .team-building-section__grid,
+  .team-members-grid {
     grid-template-columns: 1fr;
   }
 
