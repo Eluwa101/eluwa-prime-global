@@ -44,11 +44,21 @@ export function Header() {
           </Link>
 
           <nav className="site-header__nav" aria-label="Primary navigation">
-            {navigationItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                {item.label}
-              </Link>
-            ))}
+            {navigationItems.map((item) => {
+              const active = item.href.startsWith("/#")
+                ? pathname === "/"
+                : pathname === item.href || pathname.startsWith(item.href + "/");
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={active ? "is-active" : ""}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="site-header__actions">

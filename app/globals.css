@@ -191,8 +191,10 @@ main {
 }
 
 .site-header__nav a {
+  position: relative;
   font-weight: 600;
   color: var(--color-text-soft);
+  transition: color 220ms ease;
 }
 
 .site-header__actions {
@@ -583,8 +585,7 @@ main {
 
 .service-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(15, 158, 203, 0.3);
-  box-shadow: var(--color-shadow);
+  animation: shimmer-border-pulse 1.8s ease-in-out infinite;
 }
 
 .service-icon {
@@ -670,13 +671,17 @@ main {
 }
 
 .testimonials-section__controls button {
-  min-width: 5.2rem;
-  min-height: 3rem;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(19, 55, 72, 0.12);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.9);
   color: var(--color-primary);
-  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .testimonial-track {
@@ -1309,9 +1314,28 @@ main {
   }
 
   .hero-section__meta,
-  .services-grid,
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 0.5rem 1rem 1.25rem;
+  }
+
+  .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-grid > * {
+    flex: 0 0 min(20rem, 80vw);
+    scroll-snap-align: start;
   }
 
   .page-hero__actions {
@@ -1333,8 +1357,253 @@ main {
   }
 
   .hero-section__actions .button,
-  .testimonials-section__controls button,
   .contact-form .button {
     width: 100%;
   }
+
+  .testimonials-section__controls button {
+    width: 3rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   INTERACTIVITY & MODERN DESIGN ENHANCEMENTS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Scroll progress bar ────────────────────────────────────────── */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent), #66c0cc);
+  z-index: 200;
+  border-radius: 0 2px 2px 0;
+  pointer-events: none;
+  transition: width 80ms linear;
+}
+
+/* ── Nav hover underline + active indicator ─────────────────────── */
+.site-header__nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  transition: left 240ms ease, right 240ms ease;
+}
+
+.site-header__nav a:hover {
+  color: var(--color-primary);
+}
+
+.site-header__nav a:hover::after,
+.site-header__nav a.is-active::after {
+  left: 0;
+  right: 0;
+}
+
+.site-header__nav a.is-active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ── Enhanced button hovers ─────────────────────────────────────── */
+.button-primary:hover {
+  background: linear-gradient(135deg, #1c5068 0%, var(--color-accent) 55%, #2dc8f2 100%);
+  box-shadow: 0 22px 44px rgba(15, 158, 203, 0.42);
+  transform: translateY(-3px);
+}
+
+.button-secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(15, 158, 203, 0.06);
+}
+
+/* ── Card shimmer animation ─────────────────────────────────────── */
+@keyframes shimmer-border-pulse {
+  0%   { border-color: rgba(15, 158, 203, 0.12); box-shadow: var(--color-shadow-soft); }
+  35%  { border-color: rgba(102, 192, 204, 0.55); box-shadow: var(--color-shadow), 0 0 22px rgba(15, 158, 203, 0.18); }
+  70%  { border-color: rgba(15, 158, 203, 0.5);   box-shadow: var(--color-shadow), 0 0 30px rgba(15, 158, 203, 0.22); }
+  100% { border-color: rgba(15, 158, 203, 0.12); box-shadow: var(--color-shadow-soft); }
+}
+
+/* ── Benefit, focus, work-phase, highlight card hovers ──────────── */
+.benefit-card,
+.focus-card,
+.work-phase-card,
+.highlight-card {
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.benefit-card:hover,
+.focus-card:hover,
+.work-phase-card:hover,
+.highlight-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(15, 158, 203, 0.32);
+  box-shadow: var(--color-shadow), 0 0 18px rgba(15, 158, 203, 0.12);
+}
+
+/* ── Project card hover ─────────────────────────────────────────── */
+.project-card {
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(15, 158, 203, 0.38);
+  box-shadow: var(--color-shadow), 0 0 24px rgba(15, 158, 203, 0.16);
+}
+
+/* ── Testimonial card hover ─────────────────────────────────────── */
+.testimonial-card {
+  position: relative;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(15, 158, 203, 0.3);
+  box-shadow: var(--color-shadow), 0 0 20px rgba(15, 158, 203, 0.14);
+}
+
+.testimonial-card__quote-mark {
+  position: absolute;
+  top: 0.9rem;
+  left: 1.4rem;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(15, 158, 203, 0.12);
+  font-family: Georgia, serif;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Testimonial controls hover ─────────────────────────────────── */
+.testimonials-section__controls button:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ── Testimonial scroll dots ────────────────────────────────────── */
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.6rem;
+}
+
+.testimonial-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: rgba(19, 55, 72, 0.18);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: width 240ms ease, background-color 240ms ease;
+}
+
+.testimonial-dot.is-active {
+  width: 1.6rem;
+  background: var(--color-accent);
+}
+
+.testimonial-dot:hover:not(.is-active) {
+  background: rgba(19, 55, 72, 0.35);
+}
+
+/* ── FAQ item hover ─────────────────────────────────────────────── */
+.faq-item {
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(15, 158, 203, 0.28);
+  box-shadow: var(--color-shadow-soft), 0 0 14px rgba(15, 158, 203, 0.08);
+}
+
+.faq-item__trigger {
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.faq-item__trigger:hover {
+  color: var(--color-accent);
+}
+
+/* ── Service icon hover ─────────────────────────────────────────── */
+.service-icon {
+  transition: background 240ms ease, color 240ms ease, transform 240ms ease;
+}
+
+.service-card:hover .service-icon {
+  background: linear-gradient(145deg, rgba(15, 158, 203, 0.18), rgba(102, 192, 204, 0.32));
+  color: var(--color-accent);
+  transform: scale(1.08);
+}
+
+/* ── Stat card hover ────────────────────────────────────────────── */
+.stat-card {
+  transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+  cursor: default;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18), 0 0 24px rgba(255, 255, 255, 0.08);
+}
+
+/* ── Contact form hover ─────────────────────────────────────────── */
+.contact-form {
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.contact-form:focus-within {
+  border-color: rgba(15, 158, 203, 0.35);
+  box-shadow: 0 0 0 3px rgba(15, 158, 203, 0.08), var(--color-shadow-soft);
+}
+
+/* ── Scroll to top button ───────────────────────────────────────── */
+.scroll-to-top {
+  position: fixed;
+  bottom: 5.6rem;
+  right: 1.4rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(19, 55, 72, 0.28);
+  z-index: 41;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.scroll-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-to-top:hover {
+  background: var(--color-accent);
+  box-shadow: 0 10px 28px rgba(15, 158, 203, 0.38);
+  transform: translateY(-2px);
 }

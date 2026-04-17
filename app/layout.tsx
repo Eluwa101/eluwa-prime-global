@@ -3,6 +3,8 @@ import { bodyFont, headingFont } from "@/app/fonts";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { BallGame } from "@/components/ui/ball-game";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
@@ -284,10 +286,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         />
       </head>
       <body className={`${headingFont.variable} ${bodyFont.variable}`}>
+        <ScrollProgress />
         <Header />
         {children}
         <Footer />
         <BallGame />
+        <ScrollToTop />
       </body>
     </html>
   );
