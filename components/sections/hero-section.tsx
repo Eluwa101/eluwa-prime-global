@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { companyProfile, imagery } from "@/data/site-content";
+import { imagery } from "@/data/site-content";
 import { Reveal } from "@/components/ui/reveal";
 
 export function HeroSection() {
@@ -8,12 +8,10 @@ export function HeroSection() {
       <div className="hero-section__backdrop" />
       <div className="container hero-section__grid">
         <Reveal className="hero-section__content">
-          <span className="hero-section__eyebrow">Software Development and IT Consulting</span>
+          <span className="hero-section__eyebrow">AI · Software · IT Consulting · Customer Support</span>
           <h1>Your Global Partner in Software Excellence &amp; Digital Strategy.</h1>
           <p>
-            From bespoke software development to strategic IT consulting, Eluwa
-            Prime Global empowers businesses with scalable technology solutions
-            and 360 deg marketing support.
+            Eluwa Prime Global builds AI-powered software, automates customer support, and delivers digital strategies that help ambitious organisations grow with confidence.
           </p>
           <div className="hero-section__actions">
             <a className="button button-primary" href="#contact">
@@ -22,16 +20,6 @@ export function HeroSection() {
             <a className="button button-secondary" href="#services">
               Explore Services
             </a>
-          </div>
-          <div className="hero-section__meta">
-            <div>
-              <span>Mission</span>
-              <strong>{companyProfile.mission}</strong>
-            </div>
-            <div>
-              <span>Operating Hours</span>
-              <strong>{companyProfile.hours}</strong>
-            </div>
           </div>
         </Reveal>
 
@@ -46,7 +34,7 @@ export function HeroSection() {
             />
           </div>
           <div className="hero-section__floating-card">
-            <span>Founded in 2019</span>
+            <span>Founded 2019 · Nigeria &amp; Global</span>
             <strong>Engineering excellence built around client needs.</strong>
           </div>
         </Reveal>

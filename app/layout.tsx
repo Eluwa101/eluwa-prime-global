@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { bodyFont, headingFont } from "@/app/fonts";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { BallGame } from "@/components/ui/ball-game";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
@@ -9,12 +10,24 @@ export const metadata: Metadata = {
   description:
     "Eluwa Prime Global, founded by Eluwa Monday, delivers AI-powered software development, IT consulting, customer support automation, and digital strategy for businesses worldwide. Trusted by organisations in Nigeria, Africa, and beyond.",
   keywords: [
-    // People & brand
+    // People & brand — Eluwa Monday
     "Eluwa Monday",
     "Monday Eluwa",
     "Eluwa101",
     "Eluwa Prime Global",
     "Prime Global Consulting",
+    "Eluwa Monday software developer",
+    "Eluwa Monday IT consultant",
+    "Eluwa Monday Nigeria",
+    "Eluwa Monday customer support",
+    "Eluwa Monday customer service specialist",
+    "Eluwa Monday customer experience",
+    "Eluwa Monday digital strategy",
+    "Eluwa Monday AI consultant",
+    "Eluwa Monday full stack developer",
+    "Eluwa Monday LinkedIn",
+    "Monday Eluwa developer",
+    "Monday Eluwa consultant",
     // AI keywords
     "AI consulting",
     "artificial intelligence solutions",
@@ -29,15 +42,27 @@ export const metadata: Metadata = {
     "AI customer support",
     "AI for business",
     "AI software Nigeria",
-    // Customer support
+    // Customer support specialist
+    "customer support specialist",
     "customer support automation",
+    "customer service specialist Nigeria",
     "24/7 customer support",
+    "customer experience consultant",
+    "customer success manager",
     "helpdesk software development",
     "customer success solutions",
     "support ticketing system",
     "automated customer service",
     "live chat integration",
     "CRM development",
+    "omnichannel customer support",
+    "customer support outsourcing",
+    "virtual customer support",
+    "remote customer support specialist",
+    "customer retention solutions",
+    "customer onboarding automation",
+    "support workflow automation",
+    "customer feedback systems",
     // Software & web development
     "custom software development",
     "web development Nigeria",
@@ -190,13 +215,18 @@ const jsonLd = {
       jobTitle: "Founder & Lead Consultant",
       worksFor: { "@id": "https://eluwaprimeglobal.com/#organization" },
       description:
-        "Eluwa Monday is a software developer, AI consultant, IT strategist, and founder of Eluwa Prime Global. He specialises in full-stack development, AI integration, management consulting, and customer support solutions.",
+        "Eluwa Monday is a software developer, AI consultant, customer support specialist, IT strategist, and founder of Eluwa Prime Global. He specialises in full-stack development, AI integration, customer experience design, customer service automation, management consulting, and digital strategy.",
       knowsAbout: [
         "Artificial Intelligence",
         "Software Engineering",
         "IT Consulting",
         "Digital Strategy",
-        "Customer Support Systems",
+        "Customer Support",
+        "Customer Service Automation",
+        "Customer Experience Design",
+        "Customer Success Management",
+        "Omnichannel Support Systems",
+        "CRM Development",
         "Business Process Automation",
         "React",
         "Next.js",
@@ -230,6 +260,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Header />
         {children}
         <Footer />
+        <BallGame />
       </body>
     </html>
   );

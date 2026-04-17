@@ -196,6 +196,18 @@ export const teamProfile: TeamProfile = {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
+    name: "pathway-news",
+    href: "https://pathway-news.onrender.com/",
+    description:
+      "A full-stack news platform delivering aggregated articles and updates for the BYU Pathway community. Features a clean reading experience, category filtering, and a responsive layout optimised for both desktop and mobile users.",
+    inspiration:
+      "Inspired by the need to give Pathway students a single, well-designed destination for relevant news and programme updates — replacing scattered sources with one reliable feed.",
+    language: "JavaScript",
+    updatedAt: "2026-04-17",
+    featured: true,
+    source: "github"
+  },
+  {
     name: "eluwa-prime-global",
     href: "https://github.com/Eluwa101/eluwa-prime-global",
     description:
