@@ -143,6 +143,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://eluwaprimeglobal.com"
   },
+  icons: {
+    icon: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg",
+    shortcut: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg",
+    apple: "https://pdoqlgpnznvxatyklvfs.supabase.co/storage/v1/object/public/byu-pathway-career-chats/images/eluwa-prime-global-logo.jpeg"
+  },
+  verification: {
+    google: "sV8vnywKMvsQHBj00JhAhHUnDdKQFrlGQVQg_jNWE38"
+  },
   other: {
     "linkedin:profile": "https://www.linkedin.com/in/monday-eluwa-ab2831256/"
   }
